@@ -1,7 +1,7 @@
 {
   "id": "workspace-stats",
   "name": "Workspace Stats",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "patrickiel/workspace-stats",
   "api": 1,
   "icon": "icon.svg",
