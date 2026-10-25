@@ -463,7 +463,7 @@ mod tests {
 
     #[test]
     fn words_the_toasts() {
-        let root = Path::new(r"C:\code\den");
+        let root = Path::new(if cfg!(windows) { r"C:\code\den" } else { "/code/den" });
         assert_eq!(welcome(root, 1, None, None, 0), "den: first time here");
         let scan = Scan { files: 1, languages: BTreeMap::from([("Go", 10)]), partial: false };
         assert_eq!(welcome(root, 3, Some(0), Some(&scan), 2 * 86_400 + 5), "den: 1 file (Go 100%) · opened 3 times, last 2 days ago");
